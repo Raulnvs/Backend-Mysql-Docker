@@ -1,0 +1,4 @@
+sudo docker-compose up -d // Inicia los contenedores
+sudo docker-compose down // Apaga y elimina los contenedores
+sudo docker-compose ps // Muestra el estado de los contenedores
+
