@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 
 /**
@@ -157,6 +158,62 @@ public class BDAdaptador {
         else return resultado + sLastError;
         
     }
-    
+    public String getPacientesPorApellidos() {
+        String resultado = "";
+        String id, nombre, apellidos, telefono, email, dni, sFNac;
+        Connection con = null;
+        Statement st = null;
+        PreparedStatement ps = null;
+        int iRows = 0;
+        try {
+            con = this.initDatabase();
+
+            //st = con.createStatement();
+            ps = con.prepareStatement("select * from pacientes order by apellidos");
+
+
+
+            //ResultSet rs = st.executeQuery("select * from pacientes");
+            ResultSet rs = ps.executeQuery();
+
+            // iteración sobre el resultset
+            while (rs.next())  //Mientras tengamos rows de salida...
+            {
+                iRows++;
+                id = (rs.getString("id"));
+                nombre = rs.getString("nombre");
+                apellidos = rs.getString("apellidos");
+                telefono = rs.getString("telefono");
+                email = rs.getString("email");
+                dni = rs.getString("dni");
+                sFNac = rs.getString("sFNac");
+
+                // save the results
+                resultado += "<p>" + id + ";" +
+                        nombre + ";" +
+                        apellidos + ";" +
+                        telefono + ";" +
+                        email + ";" +
+                        dni + ";" +
+                        sFNac + "</p>\n";
+            }
+        } catch (Exception e) {
+            sLastError = sLastError + "<p>Error accediendo a la BBDD Select: " + e.getMessage()+ "</p>";
+            e.printStackTrace();
+        } finally {
+            // Liberamos recursos. Cerramos sentencia y conexión
+            try {
+                if (st!= null) st.close();
+                if (con!=null) con.close();
+            } catch (Exception e) {
+                sLastError = sLastError + "<p>Error cerrando la BBDD: " + e.getMessage()+ "</p>";
+                e.printStackTrace();
+
+            }
+        }
+        resultado += "\n<p>Rows recogidas: " + iRows + "</p>\n";
+        if (sLastError.isEmpty()) return resultado;
+        else return resultado + sLastError;
+    }
 }
 
