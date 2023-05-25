@@ -108,7 +108,7 @@ public class BDAdaptador {
     
     
     //Método de inserción en la tabla de pacientes de un nuevo valor.
-    public String insertPacientes(String sCSV) {
+    public String insertPaciente(String sCSV) {
         String resultado = "<p>Error al insertar</p>";
         String id, nombre, apellidos, telefono, email, dni, sFNac;
         Connection con = null;
