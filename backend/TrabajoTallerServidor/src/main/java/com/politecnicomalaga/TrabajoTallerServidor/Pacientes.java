@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
+
 package com.politecnicomalaga.TrabajoTallerServidor;
 /*
 - Tendremos las siguientes "Call" o llamadas API Rest a nuestro HttpServlet:
