@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+html,body{
+    padding: 0;
+    margin: 0;
+}
+
+.title{
+    font-size: 2.5rem;
+}
+.wrapper {
+    animation: scroll 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+    #111111;
+    color: #eee;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 0px -400%;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .wrapper {
+        animation: scroll 800s linear infinite;
+    }
+}
+
+@media (min-width: 670px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    margin-top: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.clinica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+
+
+    border-radius: 10px;
+}
+.card{
+    padding: 0;
+    margin: 0;
+
+}
+p{
+    padding: 5px;
+}
+.custom-select {
+    margin-top: 20px;
+}
+
+.custom-select select {
+    appearance: none;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    color: #555;
+    cursor: pointer;
+}
+
+.custom-select select:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.custom-select option[selected] {
+    background-color: #ffcc00;
+    color: #fff;
+}
+
+
+
