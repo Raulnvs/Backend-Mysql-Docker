@@ -28,7 +28,7 @@ CREATE TABLE `Paciente` (
   `telefono` varchar(13) NOT NULL,
   `email` varchar(128) NOT NULL,
   `dni` varchar(15) NOT NULL,
-  `sFNac` varchar(32) NOT NULL,
+  `sFNac` DATE NOT NULL,
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -49,7 +49,6 @@ CREATE TABLE `Implante` (
   `id_paciente` int NOT NULL,
   `descripcion` varchar(200) NOT NULL,
   `fecha` DATE NOT NULL,
-  `coste` DECIMAL(13, 2) NOT NULL,
   `tipo_implante` varchar(50) NOT NULL,
   `coste` DECIMAL(13, 2) NOT NULL,
   `bcobrado` BOOLEAN,
@@ -88,7 +87,7 @@ INSERT INTO `Implante` ( `id_implante`, `id_paciente`, `descripcion`, `fecha`, `
 (2, 2, 'Implante de incisivo', '2023-06-20', 2000.00, 1),
 (3, 3, 'Implante de premolar', '2023-07-10', 1800.00, 0);
 
-INSERT INTO Clinica (`id_clinica`, `nombre`, `direccion`, `telefono`, `email`, `tipo_implante`, `cif`) VALUES 
+INSERT INTO `Clinica` (`id_clinica`, `nombre`, `direccion`, `telefono`, `email`, `tipo_implante`, `cif`) VALUES 
 (1, 'Clínica Umbrella', 'Calle Principal 123', 123456789, 'clinicadentalabc@example.com', 'Implantes Dentales', 'B12345678'),
 (2, 'Clínica Juan Manuel Dominguez', 'Avenida Central 456', 987654321, 'clinicadentalxyz@example.com', 'Ortodoncia', 'A98765432'),
 (3, 'Clínica Awooga', 'Plaza Principal 789', 555555555, 'clinicadental123@example.com', 'Implantes Dentales', 'C54321098');
@@ -101,10 +100,9 @@ INSERT INTO Clinica (`id_clinica`, `nombre`, `direccion`, `telefono`, `email`, `
 --
 -- Indices de la tabla `proveedores`
 --
-ALTER TABLE `pacientes`
-  ADD PRIMARY KEY (`id`);
-COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
