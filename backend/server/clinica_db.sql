@@ -28,7 +28,7 @@ CREATE TABLE `Paciente` (
   `telefono` varchar(13) NOT NULL,
   `email` varchar(128) NOT NULL,
   `dni` varchar(15) NOT NULL,
-  `sFNac` DATE NOT NULL,
+  `sFNac` DATE NOT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -66,7 +66,7 @@ CREATE TABLE `Clinica` (
   `telefono` int NOT NULL,
   `email` VARCHAR(30) NOT NULL,
   `tipo_implante` varchar(50) NOT NULL,
-  `cif` varchar(9) NOT NULL,
+  `cif` varchar(9) NOT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -105,4 +105,3 @@ INSERT INTO `Clinica` (`id_clinica`, `nombre`, `direccion`, `telefono`, `email`,
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
