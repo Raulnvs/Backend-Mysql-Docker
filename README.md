@@ -19,7 +19,7 @@ Integración y pruebas: Una persona puede encargarse de integrar todas las parte
 
 --------FRONT--------
 
-LIBRE
+RAÚL NAVAS
 Desarrollo de la aplicación de interfaz de texto: Otra persona puede encargarse de desarrollar la aplicación en Java con interfaz de texto que se conecte con OKHttp para realizar las distintas opciones del backend. Deberá implementar la lógica necesaria para mostrar las opciones al usuario y procesar las respuestas del servidor.
 
 JOSÉ ARDILA
