@@ -120,8 +120,7 @@ public class BDAdaptador {
             else
                 resultado = "<p>Algo ha salido mal con la sentencia Insert Pacientes</p>";
             // En este caso es una orden hacia la base de datos, y no tenemos
-            // ResultSet para iterar, las cosas pueden ir bien o mal, nada más
-            // que hacer aquí
+            // ResultSet para iterar, puede ir bien o mal, nada más que hacer aquí
 
         } catch (Exception e) {
             sLastError = sLastError + "<p>Error accediendo a la base de datos (INSERT): " + e.getMessage() + "</p>";
