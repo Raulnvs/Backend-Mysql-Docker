@@ -95,7 +95,7 @@ public class BDAdaptador {
     // Método para insertar un nuevo paciente en la tabla
     public String insertPaciente(String sCSV) {
         String resultado = "<p>Error al insertar</p>";
-        String id, nombre, apellidos, telefono, email, dni, sFNac;
+        String id, nombre, apellidos, telefono, email, dni, sFNac; // @Adri: ¿Parece que no utilizamos estas variables?
         Connection con = null;
 
         Paciente miPc = new Paciente(sCSV);
