@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
- */
+
 package com.politecnicomalaga.TrabajoTallerServidor;
 /*
 - Tendremos las siguientes "Call" o llamadas API Rest a nuestro HttpServlet:
@@ -23,16 +20,11 @@ de manera adecuada.
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author andres
- */
 public class Pacientes extends HttpServlet {
 
     /**
