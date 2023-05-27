@@ -21,7 +21,7 @@ public class BDAdaptador {
         String dbDriver = "com.mysql.jdbc.Driver";
         String dbURL = "jdbc:mysql://bbdd:3306/";
         // Nombre de la base de datos
-        String dbName = "taller_db";
+        String dbName = "clinica_db";
         String dbUsername = "mecanico";
         String dbPassword = "2secret2know";
 
