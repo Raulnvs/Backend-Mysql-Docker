@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clinica Dentista</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+<body>
+<div class="wrapper">
+    <div class="clinica">
+        <h1>Clinica Dentista</h1>
+        <div class="custom-select">
+            <select name="potencial" id="potencial" class="sources">
+                <option value="DH" selected>¿Qué quieres hacer?</option>
+                <option value="A">Añadir Paciente</option>
+                <option value="B">Añadir Tratamiento</option>
+                <option value="C">Listar Paciente Apellidos</option>
+                <option value="D">Listar Paciente DNI</option>
+                <option value="E">Cobrar Tratamiento</option>
+            </select>
+        </div>
+        <div id="pacienteInputs" class="hidden">
+            <input type="text" id="id" placeholder="ID">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellidos" placeholder="Apellidos">
+            <input type="text" id="telefono" placeholder="Telefono">
+            <input type="text" id="email" placeholder="email">
+            <input type="text" id="dni" placeholder="DNI">
+            <input type="text" id="fechaNac" placeholder="Fecha Nacimiento">
+        </div>
+        <button id="guardarDatos" class="hidden">Guardar Datos</button>
+        <div id="tratamientoInputs" class="hidden">
+            <input type="text" id="idTratamiento" placeholder="ID Tratamiento">
+            <input type="text" id="idPaciente" placeholder="ID Paciente">
+            <input type="text" id="fecha" placeholder="Fecha">
+            <input type="text" id="descripcion" placeholder="Descripción">
+            <input type="text" id="coste" placeholder="Coste">
+        </div>
+        <button id="guardarDatosTratamiento" class="hidden">Guardar Datos</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
