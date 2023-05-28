@@ -16,12 +16,12 @@ services:
     environment:
       MYSQL_DATABASE: clinica_db
       MYSQL_ROOT_PASSWORD: secretone
-      MYSQL_PORT: 3306
+      MYSQL_PORT: 3307
     volumes:
       - ./.db_data:/var/lib/mysql
       - ./.db_backup:/docker-entrypoint-initdb.d
     ports:
-      - "3306:3306"
+      - "3308:3308"
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest

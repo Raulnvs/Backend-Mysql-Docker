@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Pacientes</servlet-name>
-        <url-pattern>/Pacientes</url-pattern>
+        <url-pattern>/clinica/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
