@@ -119,4 +119,7 @@ window.onload = function() {
         document.getElementById("descripcion").value = "";
         document.getElementById("coste").value = "";
     });
+    
+
+    // Listar Pacientes
 };
