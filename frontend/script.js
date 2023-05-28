@@ -50,17 +50,18 @@ window.onload = function() {
             dni: dni,
             fechaNac: fechaNac
         };
+
 //Enviar los datos del paciente a la api con fetch y el metodo post
-        fetch("url de la api para guardar paciente", {
-            method: "POST",//metodo http post
+        fetch("http://localhost:8080/insertPaciente?parametro=jsonPaciente", {
+            method: "POST",
             headers: {
-                "Content-Type": "application/json" //tipo de contenido json
+                "Content-Type": "application/json" // Tipo de contenido json
             },
-            body: JSON.stringify(data) //convierte el objeto en una cadena json
+            body: JSON.stringify(data) // Convierte el objeto en una cadena json
         })
-            .then(response => response.json()) //convierte la respuesta en json
+            .then(response => response.json()) // Convierte la respuesta en json
             .then(result => {
-                console.log("Respuesta de la API:", result); //muestra la respuesta de la api
+                console.log("Respuesta de la API:", result); // Muestra la respuesta de la api
             })
             .catch(error => {
                 console.error("Error al guardar los datos del paciente:", error);
@@ -95,7 +96,7 @@ window.onload = function() {
             coste: coste
         };
         // Envia los datos del tratamiento a la api utilizando fetch y metodo post
-        fetch("url api guardar tratamiento", {
+        fetch("http://localhost:8080/insertTratamiento?parametro=jsonTratamiento", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json" // Tipo de contenido json
