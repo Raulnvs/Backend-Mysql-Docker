@@ -88,7 +88,7 @@ window.onload = function() {
         const coste = document.getElementById("coste").value;
 
 
-    //crear objeto con los datos del tratameinto
+    // Crear objeto con los datos del tratameinto
         const data = {
             idTratamiento: idTratamiento,
             idPaciente: idPaciente,
@@ -96,7 +96,7 @@ window.onload = function() {
             descripcion: descripcion,
             coste: coste
         };
-        //envia los datos del tratamiento a la api utilizando fetch y metodo post
+        // Envia los datos del tratamiento a la api utilizando fetch y metodo post
         fetch("http://localhost:8080/insertTratamiento?parametro=jsonTratamiento", {
             method: "POST",
             headers: {
