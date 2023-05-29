@@ -1,15 +1,18 @@
 window.onload = function() {
+    // Son constantes que llaman los siguientes elementos del HTML.
     const select = document.getElementById("potencial");
     const pacienteInputs = document.getElementById("pacienteInputs");
     const guardarDatosButton = document.getElementById("guardarDatos");
     const tratamientoInputs = document.getElementById("tratamientoInputs");
     const guardarDatosTratamientoButton = document.getElementById("guardarDatosTratamiento");
 
+    // CSS para ocultar los elementos del HTML.
     pacienteInputs.style.display = "none"; // Ocultar los campos de entrada inicialmente
     guardarDatosButton.style.display = "none"; // Ocultar el botón "Guardar Datos" inicialmente
     tratamientoInputs.style.display = "none"; // Ocultar los campos de entrada de tratamiento inicialmente
     guardarDatosTratamientoButton.style.display = "none"; // Ocultar el botón "Guardar Datos de Tratamiento" inicialmente
 
+    // Evento que se ejecuta cuando se cambia el valor del select.
     select.addEventListener("change", function () {
         if (select.value === "A") {
             pacienteInputs.style.display = "flex"; // Mostrar los campos de entrada si se selecciona "Añadir Paciente"
@@ -29,8 +32,9 @@ window.onload = function() {
         }
     });
 
+    // Evento que se ejecuta cuando se presiona el boton "Guardar Datos".
     guardarDatosButton.addEventListener("click", function () {
-        // Obtener los valores del paciente
+        // Obtener los valores del paciente y los guarda en constantes.
         const id = document.getElementById("id").value;
         const nombre = document.getElementById("nombre").value;
         const apellidos = document.getElementById("apellidos").value;
@@ -48,17 +52,18 @@ window.onload = function() {
             dni: dni,
             fechaNac: fechaNac
         };
-//evniar los datos del paciente a la api con fetch y el metodo post
-        fetch("url de la api para guardar paciente", {
-            method: "POST",//metodo http post
+
+        // Enviar los datos del paciente a la api con fetch y el metodo post
+        fetch("http://localhost:8080/insertPaciente?parametro=jsonPaciente", {
+            method: "POST",
             headers: {
-                "Content-Type": "application/json"//tipo de contenido json
+                "Content-Type": "application/json" // Tipo de contenido json
             },
-            body: JSON.stringify(data)//convierte el objeto en una cadena json
+            body: JSON.stringify(data) // Convierte el objeto en una cadena json
         })
-            .then(response => response.json())//convierte la respuesta en json
+            .then(response => response.json()) // Convierte la respuesta en json
             .then(result => {
-                console.log("Respuesta de la API:", result);//muestra la respuesta de la api
+                console.log("Respuesta de la API:", result); // Muestra la respuesta de la api
             })
             .catch(error => {
                 console.error("Error al guardar los datos del paciente:", error);
@@ -83,7 +88,7 @@ window.onload = function() {
         const coste = document.getElementById("coste").value;
 
 
-    //crear objeto con los datos del tratameinto
+    // Crear objeto con los datos del tratameinto
         const data = {
             idTratamiento: idTratamiento,
             idPaciente: idPaciente,
@@ -91,8 +96,8 @@ window.onload = function() {
             descripcion: descripcion,
             coste: coste
         };
-        //envia los datos del tratamiento a la api utilizando fetch y metodo post
-        fetch("url api guardar tratamiento", {
+        // Envia los datos del tratamiento a la api utilizando fetch y metodo post
+        fetch("http://localhost:8080/insertTratamiento?parametro=jsonTratamiento", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"//tipo de contenido json
@@ -114,4 +119,7 @@ window.onload = function() {
         document.getElementById("descripcion").value = "";
         document.getElementById("coste").value = "";
     });
+    
+
+    // Listar Pacientes
 };

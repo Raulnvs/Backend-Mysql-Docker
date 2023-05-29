@@ -1,3 +1,4 @@
+
 window.onload = function() {
     const select = document.getElementById("potencial");
     const pacienteInputs = document.getElementById("pacienteInputs");
@@ -29,6 +30,7 @@ window.onload = function() {
         }
     });
 
+    // Boton para guardar datos del paciente
     guardarDatosButton.addEventListener("click", function () {
         // Obtener los valores del paciente
         const id = document.getElementById("id").value;
@@ -48,17 +50,18 @@ window.onload = function() {
             dni: dni,
             fechaNac: fechaNac
         };
-//evniar los datos del paciente a la api con fetch y el metodo post
-        fetch("url de la api para guardar paciente", {
-            method: "POST",//metodo http post
+
+//Enviar los datos del paciente a la api con fetch y el metodo post
+        fetch("http://localhost:8080/insertPaciente?parametro=jsonPaciente", {
+            method: "POST",
             headers: {
-                "Content-Type": "application/json"//tipo de contenido json
+                "Content-Type": "application/json" // Tipo de contenido json
             },
-            body: JSON.stringify(data)//convierte el objeto en una cadena json
+            body: JSON.stringify(data) // Convierte el objeto en una cadena json
         })
-            .then(response => response.json())//convierte la respuesta en json
+            .then(response => response.json()) // Convierte la respuesta en json
             .then(result => {
-                console.log("Respuesta de la API:", result);//muestra la respuesta de la api
+                console.log("Respuesta de la API:", result); // Muestra la respuesta de la api
             })
             .catch(error => {
                 console.error("Error al guardar los datos del paciente:", error);
@@ -74,6 +77,7 @@ window.onload = function() {
         document.getElementById("fechaNac").value = "";
     });
 
+    // Botón para guardar datos de tratamiento.
     guardarDatosTratamientoButton.addEventListener("click", function () {
         // Obtener los valores del tratamiento
         const idTratamiento = document.getElementById("idTratamiento").value;
@@ -83,7 +87,7 @@ window.onload = function() {
         const coste = document.getElementById("coste").value;
 
 
-    //crear objeto con los datos del tratameinto
+    //Crear objeto con los datos del tratamiento
         const data = {
             idTratamiento: idTratamiento,
             idPaciente: idPaciente,
@@ -91,17 +95,17 @@ window.onload = function() {
             descripcion: descripcion,
             coste: coste
         };
-        //envia los datos del tratamiento a la api utilizando fetch y metodo post
-        fetch("url api guardar tratamiento", {
+        // Envia los datos del tratamiento a la api utilizando fetch y metodo post
+        fetch("http://localhost:8080/insertTratamiento?parametro=jsonTratamiento", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"//tipo de contenido json
+                "Content-Type": "application/json" // Tipo de contenido json
             },
-            body: JSON.stringify(data)//convierte el objeto en cadena json
+            body: JSON.stringify(data) // Convierte el objeto en cadena json
         })
-            .then(response => response.json())//convierte la respuesta en json
+            .then(response => response.json()) // Convierte la respuesta en json
             .then(result => {
-                console.log("Respuesta de la API:", result);//muestra la respuesta de la api
+                console.log("Respuesta de la API:", result); // Muestra la respuesta de la api
             })
             .catch(error => {
                 console.error("Error al guardar los datos del tratamiento:", error);

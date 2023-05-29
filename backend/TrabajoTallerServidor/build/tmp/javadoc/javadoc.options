@@ -1,8 +1,0 @@
--classpath '/home/andres/NetBeansProjects/TrabajoTallerServidor/build/classes/java/main:/home/andres/NetBeansProjects/TrabajoTallerServidor/build/resources/main:/home/andres/.gradle/caches/modules-2/files-2.1/jakarta.platform/jakarta.jakartaee-web-api/8.0.0/d8b6bc85deefd37299341f6b8d88938ccf12a9ce/jakarta.jakartaee-web-api-8.0.0.jar'
--d '/home/andres/NetBeansProjects/TrabajoTallerServidor/build/docs/javadoc'
--doctitle 'TrabajoTallerServidor 0.1 API'
--notimestamp 
--quiet 
--windowtitle 'TrabajoTallerServidor 0.1 API'
-'/home/andres/NetBeansProjects/TrabajoTallerServidor/src/main/java/com/politecnicomalaga/TrabajoTallerServidor/BDAdaptador.java'
-'/home/andres/NetBeansProjects/TrabajoTallerServidor/src/main/java/com/politecnicomalaga/TrabajoTallerServidor/Servidor.java'
