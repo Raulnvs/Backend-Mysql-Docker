@@ -1,4 +1,4 @@
-package com.politecnicomalaga.clinicaserver;
+package main.java.com.politecnicomalaga.clinicaserver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-package com.politecnicomalaga.clinicaserver;
+package main.java.com.politecnicomalaga.clinicaserver;
 
 public class Tratamiento {
 	public enum AtributosTratamiento {CODIGO,DESCRIPCION,FECHA,PRECIO,COBRADO};

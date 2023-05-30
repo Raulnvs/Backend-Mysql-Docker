@@ -1,5 +1,5 @@
 
-package com.politecnicomalaga.clinicaserver;
+package main.java.com.politecnicomalaga.clinicaserver;
 /*
 - Tendremos las siguientes "Call" o llamadas API Rest a nuestro HttpServlet:
    --- listaPacientes?parametro=apellidos
