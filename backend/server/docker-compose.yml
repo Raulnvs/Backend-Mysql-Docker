@@ -15,7 +15,7 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: clinica_db
-      MYSQL_ROOT_PASSWORD: secretone
+      MYSQL_ROOT_PASSWORD: muysegura
       MYSQL_PORT: 3307
     volumes:
       - ./.db_data:/var/lib/mysql
@@ -27,8 +27,8 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     environment:
       PMA_HOST: "bbdd"
-      PMA_USER: "chris_redfield"
-      PMA_PASSWORD: "cebolla"
+      PMA_USER: "gestorDentista"
+      PMA_PASSWORD: "muysegura"
     depends_on:
       - "bbdd"
     ports:
