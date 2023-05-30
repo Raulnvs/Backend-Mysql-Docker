@@ -23,8 +23,8 @@ public class BDAdaptador {
         String dbURL = "jdbc:mysql://bbdd:3307/";
         // Nombre de la base de datos
         String dbName = "clinica_db";
-        String dbUsername = "mecanico";
-        String dbPassword = "2secret2know";
+        String dbUsername = "chris_redfield";
+        String dbPassword = "cebolla";
 
         // Establecemos la conexión con la base de datos
         try {
