@@ -27,8 +27,8 @@ services:
     image: phpmyadmin/phpmyadmin:latest
     environment:
       PMA_HOST: "bbdd"
-      PMA_USER: "root"
-      PMA_PASSWORD: "secretone"
+      PMA_USER: "chris_redfield"
+      PMA_PASSWORD: "cebolla"
     depends_on:
       - "bbdd"
     ports:
