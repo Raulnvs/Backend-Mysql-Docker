@@ -137,10 +137,10 @@ window.onload = function () {
       })
         .then((response) => response.json()) // Convierte la respuesta en json
         .then((result) => {
-          console.log("Respuesta de la API:", result); // Muestra la respuesta de la API
+          alert("Respuesta de la API:", result); // Muestra la respuesta de la API
         })
         .catch((error) => {
-          console.error("Error al guardar los datos del paciente:", error);
+         alert("Error al guardar los datos del paciente:", error);
         });
   
       // Reiniciar los valores
@@ -172,7 +172,7 @@ window.onload = function () {
       };
   
       // Enviar los datos del tratamiento a la API utilizando fetch y método POST
-      fetch("http://localhost:8080/tratamiento", {
+      fetch("http://localhost:8080/tratamiento="+idTratamiento+";"+idPaciente+";"+fecha+";"+descripcion+";"+coste, {
         method: "POST",
         headers: {
           "Content-Type": "application/json", // Tipo de contenido json
@@ -181,10 +181,10 @@ window.onload = function () {
       })
         .then((response) => response.json()) // Convierte la respuesta en json
         .then((result) => {
-          console.log("Respuesta de la API:", result); // Muestra la respuesta de la API
+          alert("Respuesta de la API:", result); // Muestra la respuesta de la API
         })
         .catch((error) => {
-          console.error("Error al guardar los datos del tratamiento:", error);
+         alert("Error al guardar los datos del tratamiento:", error);
         });
   
       // Reiniciar los valores
@@ -201,10 +201,10 @@ window.onload = function () {
       fetch("http://localhost:8080/listarPaciente?apellidos=" + apellidos)
         .then((response) => response.json())
         .then((result) => {
-          console.log("Respuesta de la API:", result); // Muestra la respuesta de la API
+          alert("Respuesta de la API:", result); // Muestra la respuesta de la API
         })
         .catch((error) => {
-          console.error("Error al listar los pacientes:", error);
+         alert("Error al listar los pacientes:", error);
         });
   
       // Reiniciar el valor
@@ -217,34 +217,34 @@ window.onload = function () {
       fetch("http://localhost:8080/listarTratamiento?dni=" + dni)
         .then((response) => response.json())
         .then((result) => {
-          console.log("Respuesta de la API:", result); // Muestra la respuesta de la API
+         alert("Respuesta de la API:", result); // Muestra la respuesta de la API
         })
         .catch((error) => {
-          console.error("Error al listar los tratamientos:", error);
+         alert("Error al listar los tratamientos:", error);
         });
   
       // Reiniciar el valor
       document.getElementById("listarTratamientoDNIpacienteInputs").value = "";
     });
     cobrarButton.addEventListener("click", function () {
-        const codigoTratamiento = document.getElementById("cobrarInput").value;
-      
-        fetch("http://localhost:8080/verificarCobro?codigoTratamiento=" + codigoTratamiento)
+        const codigoTratamiento = document.getElementById("cobrarT").value;
+        const codigoPaciente = document.getElementById("cobrarP").value;
+        fetch("http://localhost:8080/verificarCobro?codigoTratamiento=" + codigoTratamiento+";"+codigoPaciente)
           .then((response) => response.json())
           .then((result) => {
             if (result.valid) {
               if (result.cobrado) {
-                console.log("El tratamiento ya está cobrado.");
+               alert("El tratamiento ya está cobrado.");
               } else {
-                console.log("El tratamiento no está cobrado. Proceder con el cobro.");
+                alert("El tratamiento no está cobrado. Proceder con el cobro.");
                 // Aquí puedes realizar las acciones necesarias para efectuar el cobro del tratamiento
               }
             } else {
-              console.log("El código de tratamiento no corresponde al paciente.");
+              alert("El código de tratamiento no corresponde al paciente.");
             }
           })
           .catch((error) => {
-            console.error("Error al verificar el cobro del tratamiento:", error);
+            alert("Error al verificar el cobro del tratamiento:", error);
           });
       
         // Reiniciar el valor
