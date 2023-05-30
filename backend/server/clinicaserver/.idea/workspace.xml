@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5f1c50b6-302e-4b41-826b-287f027d55e0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.db_data/#ib_16384_0.dblwr" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/#ib_16384_0.dblwr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_redo/#ib_redo9" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/#innodb_redo/#ib_redo9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_1.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_10.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_2.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_3.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_4.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_5.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_6.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_7.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_8.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/#innodb_temp/temp_9.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/binlog.000006" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/binlog.000006" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/binlog.index" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/binlog.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/mysql.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/mysql.ibd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/undo_001" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/undo_001" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.db_data/undo_002" beforeDir="false" afterPath="$PROJECT_DIR$/../.db_data/undo_002" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QVqXwqTUu6xgQcqQQ2gD718mJw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/jose/Documents/programacion/proyectos/clinicaFullStack/backend/TrabajoTallerServidor"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f1c50b6-302e-4b41-826b-287f027d55e0" name="Changes" comment="" />
+      <created>1685449140486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685449140486</updated>
+    </task>
+    <servers />
+  </component>
+</project>
