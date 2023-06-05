@@ -27,7 +27,7 @@ html, body {
 
 @media (prefers-reduced-motion) {
     .wrapper {
-        animation: scroll 800s linear infinite;
+        animation: scroll 600s linear infinite;
     }
 }
 
@@ -83,7 +83,10 @@ h1 {
 }
 
 #pacienteInputs,
-#tratamientoInputs {
+#tratamientoInputs,
+#listarPacienteApellidos,
+#listarTratamientoDNIpacienteInputs,
+#cobrarInput {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -93,7 +96,10 @@ h1 {
 }
 
 #pacienteInputs input[type="text"],
-#tratamientoInputs input[type="text"] {
+#tratamientoInputs input[type="text"],
+#listarPacienteApellidos input[type="text"],
+#listarTratamientoDNIpacienteInputs input[type="text"],
+#cobrarInput input[type="text"] {
     width: 200px;
     padding: 10px;
     border: none;
@@ -103,13 +109,19 @@ h1 {
 }
 
 #pacienteInputs input[type="text"]:focus,
-#tratamientoInputs input[type="text"]:focus {
+#tratamientoInputs input[type="text"]:focus,
+#listarPacienteApellidos input[type="text"]:focus,
+#listarTratamientoDNIpacienteInputs input[type="text"]:focus,
+#cobrarInput input[type="text"]:focus {
     outline: none;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 button#guardarDatos,
-button#guardarDatosTratamiento {
+button#guardarDatosTratamiento,
+button#listarPaciente,
+button#listarTratamientoButton,
+button#cobrarButton {
     margin-top: 15px;
     color: #ffffff;
     font-size: 14px;
@@ -121,10 +133,63 @@ button#guardarDatosTratamiento {
     transition: background-color 0.3s ease;
     background-color: #4F95DA;
     text-align: center;
-    margin-left: 120px;
+    margin-left:120px;
 }
 
+
 button#guardarDatosTratamiento:hover,
-button#guardarDatosTratamiento:hover {
+button#guardarDatosTratamiento:hover, 
+button#listarPaciente:hover,
+button#listarTratamientoButton:hover,
+button#cobrarButton:hover
+ {
     background-color: #3678B5;
+}
+#listarPaciente {
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 15px;
+    width: 150px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #4F95DA;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#listarTratamientoButton{
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 15px;
+    width: 150px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #4F95DA;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#cobrarButton{
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 15px;
+    width: 150px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #4F95DA;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }

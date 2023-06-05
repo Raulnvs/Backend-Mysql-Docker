@@ -1,5 +1,6 @@
 package com.politecnicomalaga.TrabajoTallerServidor;
 
+
 import java.util.ArrayList;
 
 public class Paciente {
@@ -42,6 +43,7 @@ public class Paciente {
         } else {
             return;
         }
+
 
         // Después de 0 a n tratamientos
         misTratamientos = new ArrayList<>();
@@ -236,4 +238,7 @@ public class Paciente {
         }
         return resultado;
     }
+
+
+
 }

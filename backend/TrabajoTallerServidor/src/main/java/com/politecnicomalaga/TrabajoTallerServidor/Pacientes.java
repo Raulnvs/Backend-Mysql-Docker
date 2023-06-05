@@ -38,7 +38,7 @@ public class Pacientes extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         String peticionSolicitada = request.getParameter("peticion");
         String datos = request.getParameter("datos");  //Datos enviados en CSV
         
@@ -84,14 +84,31 @@ public class Pacientes extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
         BDAdaptador bd = new BDAdaptador();
-        String jsonRespuesta = bd.getPacientesPorApellidos();
+        // Manejar las solicitudes GET
+        String parametro = request.getParameter("parametro");
+        if (parametro != null) {
+            switch (parametro) {
+                case "listaPacientes":
+                    response.setContentType(bd.getPacientesPorApellidos());
 
-        response.setContentType("application/json");
+                    break;
+                case "listaTratamientos":
+                       response.setContentType(bd.getTodosTratamientos());
 
-        response.getWriter().write(jsonRespuesta);
+                    break;
+                case "cobraTratamiento":
+
+                    break;
+                default:
+                    response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Endpoint inválido");
+                    break;
+            }
+        } else {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Endpoint requerido");
+        }
     }
 
     /**
@@ -103,9 +120,25 @@ public class Pacientes extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        // Manejar las solicitudes POST
+        BDAdaptador bd = new BDAdaptador();
+        String parametro = request.getParameter("parametro");
+        if (parametro != null) {
+            switch (parametro) {
+                case "insertPaciente":
+                    bd.insertPacienteJson(String.valueOf(request.getParameter("parametro1")));
+                    break;
+                case "insertTratamiento":
+                    bd.insertTratamientoJson(String.valueOf(request.getParameter("parametro1")));
+                    break;
+                default:
+                    response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Endpoint inválido");
+                    break;
+            }
+        } else {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Endpoint requerido");
+        }
     }
 
     /**

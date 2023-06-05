@@ -1,18 +1,30 @@
+# ClinicaFullStack
+Proyecto Full Stack con Docker, Tomcat, MySQL y myPHPAdmin.
 
-JOSÉ ÁLVAREZ
-DOCKER
+# Reparto de tareas
 
-JUANJO
-Creación de la base de datos y tablas.
+### Backend
 
-RAUL NAVAS
-Frontend (HTML, CSS, JavaScript
+Docker - José Álvarez  
 
-RAUL ALVAREZ
-Desarrollo de los HttpServlets.
 
-ADRI
-Integración y pruebas: Una persona puede encargarse de integrar todas las partes desarrolladas hasta el momento y realizar pruebas para asegurar el correcto funcionamiento del backend.
+BDAdaptor - Raúl Álvarez  
 
-JOSÉ ARDILA
-Pruebas y refinamiento: Una persona puede encargarse de realizar pruebas en los clientes desarrollados y asegurarse de que funcionan correctamente. También puede realizar refinamientos en la interfaz de usuario y mejorar la experiencia del usuario. 
+Servlets - José Álvarez, Raúl Álvarez  
+
+
+Tablas - Juan José  
+  
+
+### Frontend 
+
+HTML, CSS, JS - Raúl Navas  
+
+  
+    
+      
+      
+### Tests e Integración
+
+
+Adrián Jiménez y José Ardila
